@@ -1,0 +1,5 @@
+__pycache__
+cache/cache.json
+out
+settings/settings.json
+venv
