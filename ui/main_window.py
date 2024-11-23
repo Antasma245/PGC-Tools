@@ -18,5 +18,5 @@ class MainWindow(QMainWindow):
         self.toolbar = ToolBar(self, app)
         self.addToolBar(self.toolbar)
 
-        self.central_widget:CentralWidget = CentralWidget(self)
+        self.central_widget = CentralWidget(self)
         self.setCentralWidget(self.central_widget)
