@@ -14,6 +14,6 @@ def show_help(toolbar) -> None:
                             '<li>For image URLs, you only need to provide one per entity (as opposed to one per language per entity for normal texts).</li></ul>' +
                             '<p>Valid text selection example (for 3 languages):</p>'
                             '<table><tr><th>TextId</th><th>CHS</th><th>CHT</th><th>DE</th></tr>' +
-                            '<tr><th>Book1</th><td style="background-color: blue">Story 1</td><td style="background-color: blue">Story 1</td><td style="background-color: blue">Story 1</td></tr>' +
-                            '<tr><th>Book2</th><td style="background-color: blue">Story 2</td><td style="background-color: blue">Story 2</td><td style="background-color: blue">Story 2</td></tr></table><br>',
+                            '<tr><th>Book1</th><td style="background-color: DodgerBlue">Story 1</td><td style="background-color: DodgerBlue">Story 1</td><td style="background-color: DodgerBlue">Story 1</td></tr>' +
+                            '<tr><th>Book2</th><td style="background-color: DodgerBlue">Story 2</td><td style="background-color: DodgerBlue">Story 2</td><td style="background-color: DodgerBlue">Story 2</td></tr></table><br>',
                             QMessageBox.Ok)
