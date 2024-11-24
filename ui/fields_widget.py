@@ -1,3 +1,5 @@
+import os
+
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QLabel, QVBoxLayout, QWidget
 
@@ -17,7 +19,12 @@ class FieldsWidget(QWidget):
     def add_logo(self):
         """Add the application logo to the widget as a placeholder"""
         self.logo_label = QLabel()
-        logo_pixmap = QPixmap('assets/pgc_tools_logo.png')
+        
+        self_path = os.path.dirname(__file__)
+        logo_path = os.path.join(self_path, '..', 'assets', 'pgc_tools_logo.png')
+        logo_path = os.path.normpath(logo_path)
+
+        logo_pixmap = QPixmap(logo_path)
         self.logo_label.setPixmap(logo_pixmap)
 
         self.fields_widget_layout.addWidget(self.logo_label)

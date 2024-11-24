@@ -5,7 +5,9 @@ import os
 class Settings:
     """Custom class to store settings in a JSON file"""
     def __init__(self):
-        self.settings_file:str = 'settings/settings.json'
+        self_path = os.path.dirname(__file__)
+        settings_path = os.path.join(self_path, 'settings.json')
+        self.settings_file:str = os.path.normpath(settings_path)
         
         # If the settings file doesn't exist, create it
         if not os.path.exists(self.settings_file):

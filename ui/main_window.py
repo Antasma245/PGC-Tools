@@ -1,3 +1,5 @@
+import os
+
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow
@@ -12,7 +14,12 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle('PGC Tools')
-        self.setWindowIcon(QPixmap('assets/pgc_tools_logo_notext.png'))
+
+        self_path = os.path.dirname(__file__)
+        logo_path = os.path.join(self_path, '..', 'assets', 'pgc_tools_logo_notext.png')
+        logo_path = os.path.normpath(logo_path)
+
+        self.setWindowIcon(QPixmap(logo_path))
         self.setContextMenuPolicy(Qt.PreventContextMenu)
 
         self.toolbar = ToolBar(self, app)

@@ -5,7 +5,9 @@ import os
 class Cache:
     """Custom cache class to store session-specific data in a JSON file"""
     def __init__(self):
-        self.cache_file:str = 'cache/cache.json'
+        self_path = os.path.dirname(__file__)
+        cache_path = os.path.join(self_path, 'cache.json')
+        self.cache_file:str = os.path.normpath(cache_path)
         
         # If the cache file doesn't exist, create it
         if not os.path.exists(self.cache_file):
