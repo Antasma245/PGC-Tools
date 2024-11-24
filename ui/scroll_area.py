@@ -10,7 +10,8 @@ class ScrollArea(QScrollArea):
         super().__init__()
 
         self.setFixedWidth(650)
-        self.setMinimumHeight(800)
+        self.setMinimumHeight(700)
+        self.setWidgetResizable(True)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
 
